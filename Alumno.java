@@ -42,22 +42,14 @@ public class Alumno {
      * en su cuenta de Github en formato de 7 caracateres
      */
     public String getNombreUsuarioGithub() {
-        if (nombre.length() >= 3 ){
-            if(numeroMatricula.length() >=4){
-                return nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
-            }
-            else{
-                return nombre.substring(0, 3) + numeroMatricula;
-            }
+       String nombreExcep = nombre;
+        String matriculaExcep = numeroMatricula;
+        if(nombreExcep.length() > 3){
+            nombreExcep = nombre.substring(0, 3);
         }
-        else{
-            if(numeroMatricula.length() >=4){
-                return nombre + numeroMatricula.substring(0, 4);  
-            }
-            else{
-                return nombre + numeroMatricula;
-            }
-
+        if(matriculaExcep.length() > 4){
+            matriculaExcep = numeroMatricula.substring(0, 4);
         }
+        return nombreExcep + matriculaExcep;
     }
 }
