@@ -22,7 +22,21 @@ public class Alumno {
     public String getNombre() {
         return nombre;
     }
+    
+    /**
+     * devuelve el nummat
+     */
+    public String getNumMat(){
+        return numeroMatricula;
+    }
 
+    /**
+     * devuelve la edad
+     */
+    public int getEdad(){
+        return edad;
+    }
+    
     /**
      * Cambia el nombre del alumno
      */

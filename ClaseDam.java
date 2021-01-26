@@ -72,4 +72,20 @@ public class ClaseDam {
         }
         System.out.println("Numero de alumnos: " + getNumeroDeAlumnos());
     }
+    
+    /**
+     * Implementamos el metodo imprimirListaNumeradaDeAlumnos que no recibe 
+     * parámetros y que imprime por pantalla un listado de los detalles de los
+     * alumnos con su número de clase delante
+     */
+    public void imprimirListaNumeradaDeAlumnos(){
+        int position;
+        position = 0;
+        for(Alumno alumno: alumnos) {
+            position = position + 1;
+            System.out.println(position + ". "+ alumno.getNombre() + " (" + alumno.getNumMat() + ") - "
+            + alumno.getEdad() + " aÃ±os");
+   
+        }
+    }
 }
